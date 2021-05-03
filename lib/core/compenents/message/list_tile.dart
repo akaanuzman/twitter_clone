@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/drawer/drawer.dart';
-import 'package:twitter_clone/core/localicate/pages_string.dart';
+
+import '../../localicate/pages_string.dart';
+import '../drawer/drawer.dart';
 
 class MessagePageListTile extends StatelessWidget {
   PagesString get notificationPageString => PagesString.instance;

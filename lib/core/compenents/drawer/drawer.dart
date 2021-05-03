@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/localicate/drawer_strings.dart';
-import 'package:twitter_clone/core/padding/padding.dart';
+
+import '../../localicate/drawer_strings.dart';
+import '../../padding/padding.dart';
 
 Divider get divider => Divider(
       thickness: 1.25,

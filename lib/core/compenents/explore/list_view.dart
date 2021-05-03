@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/drawer/drawer.dart';
-import 'package:twitter_clone/core/compenents/explore/list_view_separated.dart';
-import 'package:twitter_clone/core/localicate/explore_page_strings.dart';
+
+import '../../localicate/explore_page_strings.dart';
+import '../drawer/drawer.dart';
+import 'list_view_separated.dart';
 
 class ExplorePageListView extends StatelessWidget {
   final ScrollController controller;

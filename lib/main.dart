@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/theme/light_theme.dart';
-import 'package:twitter_clone/tabbar/tabbar_view.dart';
+
+import 'core/theme/light_theme.dart';
+import 'tabbar/tabbar_view.dart';
  
 void main() => runApp(MyApp());
  

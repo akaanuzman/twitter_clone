@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/message_page/message_page_view.dart';
+
+import 'message_page_view.dart';
 
 class MessagePage extends StatefulWidget {
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/color/light_theme_colors.dart';
-import 'package:twitter_clone/core/theme/Itheme.dart';
+
+import '../color/light_theme_colors.dart';
+import 'Itheme.dart';
 
 class LightTheme extends Itheme {
   static LightTheme? _instace;

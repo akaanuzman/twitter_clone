@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/notification/mentions/list_tile.dart';
+
+import 'list_tile.dart';
 
 class MentionsListViewBuilder extends StatelessWidget {
   final ScrollController controller;

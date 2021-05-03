@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/drawer/drawer.dart';
-import 'package:twitter_clone/core/compenents/explore/list_view.dart';
 
+import '../core/compenents/drawer/drawer.dart';
+import '../core/compenents/explore/list_view.dart';
 import 'explore_page_view_model.dart';
 
 class ExplorePageView extends ExplorePageViewModel {

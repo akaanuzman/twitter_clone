@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/post/post_list_tile.dart';
-import 'package:twitter_clone/core/localicate/circle_avatar_for_story_url.dart';
+
+import '../../localicate/circle_avatar_for_story_url.dart';
+import 'post_list_tile.dart';
 
 class PostListTileBuilder extends StatelessWidget {
   final ScrollController controller;

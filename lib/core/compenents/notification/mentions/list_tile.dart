@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/post/post_list_tile.dart';
-import 'package:twitter_clone/core/localicate/pages_string.dart';
-import 'package:twitter_clone/core/padding/padding.dart';
+
+import '../../../localicate/pages_string.dart';
+import '../../../padding/padding.dart';
+import '../../post/post_list_tile.dart';
 
 class MentionsListTile extends StatelessWidget {
   final int index;

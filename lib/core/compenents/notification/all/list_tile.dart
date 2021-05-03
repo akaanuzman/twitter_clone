@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/localicate/pages_string.dart';
-import 'package:twitter_clone/core/padding/padding.dart';
+
+import '../../../localicate/pages_string.dart';
+import '../../../padding/padding.dart';
 
 class AllListTileView extends StatelessWidget {
   PagesString get notificationPageString => PagesString.instance;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/drawer/drawer.dart';
-import 'package:twitter_clone/core/localicate/tabbar_strings.dart';
-import 'package:twitter_clone/notification_page/notification_page.dart';
-import 'package:twitter_clone/explore_page/explore_page.dart';
-import 'package:twitter_clone/home_page/home_page.dart';
-import 'package:twitter_clone/message_page/message_page.dart';
+import '../core/compenents/drawer/drawer.dart';
+import '../core/localicate/tabbar_strings.dart';
+import '../notification_page/notification_page.dart';
+import '../explore_page/explore_page.dart';
+import '../home_page/home_page.dart';
+import '../message_page/message_page.dart';
 
 class TweeterTabbarView extends StatefulWidget {
   @override

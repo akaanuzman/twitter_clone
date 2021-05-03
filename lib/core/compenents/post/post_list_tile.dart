@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/localicate/circle_avatar_for_story_url.dart';
-import 'package:twitter_clone/core/localicate/listview_tweet.dart';
-import 'package:twitter_clone/core/padding/padding.dart';
+
+import '../../localicate/circle_avatar_for_story_url.dart';
+import '../../localicate/listview_tweet.dart';
+import '../../padding/padding.dart';
 
 final TextStyle boldText = TextStyle(fontWeight: FontWeight.bold);
 Tweet get tweet => Tweet.instance;

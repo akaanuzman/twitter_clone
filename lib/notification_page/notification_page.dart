@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/notification_page/notification_page_view.dart';
+
+import 'notification_page_view.dart';
 
 class NotificationPage extends StatefulWidget {
 

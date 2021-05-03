@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/story/circle_avatar.dart';
-import 'package:twitter_clone/core/localicate/circle_avatar_for_story_url.dart';
+
+import '../../localicate/circle_avatar_for_story_url.dart';
+import 'circle_avatar.dart';
 
 class ListViewStory extends StatelessWidget {
   StoryUrl get storyUrl => StoryUrl.instance;

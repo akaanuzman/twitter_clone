@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/notification/all/list_view_builder.dart';
-import 'package:twitter_clone/core/compenents/notification/mentions/list_view_builder.dart';
-import 'package:twitter_clone/notification_page/notification_page_view_model.dart';
+
+import '../core/compenents/notification/all/list_view_builder.dart';
+import '../core/compenents/notification/mentions/list_view_builder.dart';
+import 'notification_page_view_model.dart';
 
 class NotificationPageView extends NotificationPageViewModel {
   final ScrollController controller;

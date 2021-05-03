@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/drawer/drawer.dart';
-import 'package:twitter_clone/core/compenents/notification/all/list_tile.dart';
+
+import '../../drawer/drawer.dart';
+import 'list_tile.dart';
 
 class AllListViewBuilderView extends StatelessWidget {
   final ScrollController controller;

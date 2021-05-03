@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/localicate/pages_string.dart';
-import 'package:twitter_clone/core/padding/padding.dart';
-import 'package:twitter_clone/notification_page/notification_page.dart';
+
+import '../../notification_page/notification_page.dart';
+import '../localicate/pages_string.dart';
+import '../padding/padding.dart';
 
 abstract class BaseStatefulNotificationPage<T extends StatefulWidget>
     extends State<NotificationPage> {

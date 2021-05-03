@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/core/compenents/drawer/drawer.dart';
-import 'package:twitter_clone/core/localicate/explore_page_strings.dart';
+
+import '../../localicate/explore_page_strings.dart';
+import '../drawer/drawer.dart';
 
 class ExplorePageListTile extends StatelessWidget {
   final int index;
