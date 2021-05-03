@@ -7,7 +7,7 @@ import 'explore_page_view_model.dart';
 class ExplorePageView extends ExplorePageViewModel {
   final ScrollController controller;
 
-  ExplorePageView({@required this.controller});
+  ExplorePageView({required this.controller});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

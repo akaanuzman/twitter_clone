@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CircleAvatarForStory extends StatelessWidget {
   final String url;
 
-  const CircleAvatarForStory({Key key, @required this.url}) : super(key: key);
+  const CircleAvatarForStory({Key? key, required this.url}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +13,16 @@ class CircleAvatarForStory extends StatelessWidget {
   }
 
   Container _buildCircleAvatar(
-          {double height, double width, BuildContext context}) =>
+          {required double height,
+          required double width,
+          required BuildContext context}) =>
       Container(
         height: height,
         width: width / 6,
         decoration: _buildBoxDecoration(context: context),
       );
 
-  BoxDecoration _buildBoxDecoration({@required BuildContext context}) =>
+  BoxDecoration _buildBoxDecoration({required BuildContext context}) =>
       BoxDecoration(
         image: _buildStoryImage,
         shape: BoxShape.circle,
@@ -31,6 +33,6 @@ class CircleAvatarForStory extends StatelessWidget {
         image: NetworkImage(url),
       );
 
-  Border _buildBorder({@required BuildContext context}) =>
+  Border _buildBorder({required BuildContext context}) =>
       Border.all(color: Theme.of(context).colorScheme.secondary, width: 3);
 }

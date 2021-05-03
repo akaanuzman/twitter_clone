@@ -4,7 +4,7 @@ import 'package:twitter_clone/core/compenents/message/list_tile.dart';
 
 class MessagePageListViewBuilder extends StatelessWidget {
   final ScrollController controller;
-  const MessagePageListViewBuilder({Key key, @required this.controller})
+  const MessagePageListViewBuilder({Key? key, required this.controller})
       : super(key: key);
 
   @override
@@ -23,7 +23,7 @@ class MessagePageListViewBuilder extends StatelessWidget {
         ),
       );
 
-  Card _buildCard({@required BuildContext context}) => Card(
+  Card _buildCard({required BuildContext context}) => Card(
         color: Theme.of(context).appBarTheme.backgroundColor,
         elevation: 0,
         child: MessagePageListTile(),

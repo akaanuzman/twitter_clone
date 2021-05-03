@@ -183,7 +183,7 @@ Icon _buildDrawerIcon(IconData icon, Color color) {
 Text _buildDrawerSubtitleOneText(String data, BuildContext context) {
   return Text(
     data,
-    style: Theme.of(context).textTheme.caption.copyWith(fontSize: 14),
+    style: Theme.of(context).textTheme.caption?.copyWith(fontSize: 14),
   );
 }
 

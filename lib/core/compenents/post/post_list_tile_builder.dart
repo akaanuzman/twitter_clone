@@ -8,10 +8,10 @@ class PostListTileBuilder extends StatelessWidget {
   final Divider divider;
 
   const PostListTileBuilder(
-      {Key key,
-      @required this.controller,
-      @required this.storyUrl,
-      @required this.divider})
+      {Key? key,
+      required this.controller,
+      required this.storyUrl,
+      required this.divider})
       : super(key: key);
 
   @override

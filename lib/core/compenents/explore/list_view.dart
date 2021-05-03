@@ -7,7 +7,7 @@ class ExplorePageListView extends StatelessWidget {
   final ScrollController controller;
   final Divider divider;
   const ExplorePageListView(
-      {Key key, @required this.controller, @required this.divider})
+      {Key? key, required this.controller, required this.divider})
       : super(key: key);
 
   ExplorePageStrings get explorePageStrings => ExplorePageStrings.instance;
@@ -17,7 +17,7 @@ class ExplorePageListView extends StatelessWidget {
     return _buildListView(context: context);
   }
 
-  ListView _buildListView({@required BuildContext context}) {
+  ListView _buildListView({required BuildContext context}) {
     return ListView(
       children: [
         divider,
@@ -31,7 +31,7 @@ class ExplorePageListView extends StatelessWidget {
     );
   }
 
-  Padding _buildTitle({@required BuildContext context}) => Padding(
+  Padding _buildTitle({required BuildContext context}) => Padding(
         padding: applyPadding.paddingLeftSixteen,
         child: Text(
           explorePageStrings.title,
@@ -39,16 +39,16 @@ class ExplorePageListView extends StatelessWidget {
         ),
       );
 
-  Padding _buildShowMore({@required BuildContext context}) => Padding(
+  Padding _buildShowMore({required BuildContext context}) => Padding(
         padding: applyPadding.paddingLeftSixteen,
         child: _buildText(
           data: explorePageStrings.showMore,
-          style: Theme.of(context).textTheme.headline6.copyWith(
+          style: Theme.of(context).textTheme.headline6!.copyWith(
               fontWeight: FontWeight.w500,
               color: Theme.of(context).colorScheme.secondary),
         ),
       );
 
-  Text _buildText({@required String data, @required TextStyle style}) =>
+  Text _buildText({required String data, required TextStyle style}) =>
       Text(data, style: style);
 }

@@ -10,12 +10,12 @@ class MessagePageListTile extends StatelessWidget {
     return _buildListTile(context: context);
   }
 
-  ListTile _buildListTile({@required BuildContext context}) => ListTile(
+  ListTile _buildListTile({required BuildContext context}) => ListTile(
       leading: _buildCircleAvatar,
       title: _buildTitle,
       subtitle: _buildText(
           data: notificationPageString.messageContent,
-          style: Theme.of(context).textTheme.subtitle1));
+          style: Theme.of(context).textTheme.subtitle1!));
 
   CircleAvatar get _buildCircleAvatar => CircleAvatar(
         backgroundImage: NetworkImage(notificationPageString.url),
@@ -25,7 +25,7 @@ class MessagePageListTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           _buildUsernameWrap,
-          _buildText(data: notificationPageString.date),
+          Text(notificationPageString.date)
         ],
       );
 
@@ -33,10 +33,10 @@ class MessagePageListTile extends StatelessWidget {
         spacing: 3,
         children: [
           _buildText(data: notificationPageString.username, style: boldText),
-          _buildText(data: notificationPageString.nickName)
+          Text(notificationPageString.nickName)
         ],
       );
 
-  Text _buildText({@required String data, TextStyle style}) =>
+  Text _buildText({required String data,required TextStyle style}) =>
       Text(data, style: style);
 }

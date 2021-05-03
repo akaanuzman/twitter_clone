@@ -14,13 +14,13 @@ class PostListTile extends StatelessWidget {
   final int index;
   final StoryUrl storyUrl;
 
-  const PostListTile({Key key, @required this.index, @required this.storyUrl})
+  const PostListTile({Key? key, required this.index, required this.storyUrl})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final TextStyle captionText =
-        Theme.of(context).textTheme.caption.copyWith(fontSize: 16);
+        Theme.of(context).textTheme.caption!.copyWith(fontSize: 16);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return _buildPost(
@@ -28,10 +28,10 @@ class PostListTile extends StatelessWidget {
   }
 
   ListTile _buildPost(
-          {@required BuildContext context,
-          @required double height,
-          @required double width,
-          @required TextStyle style}) =>
+          {required BuildContext context,
+          required double height,
+          required double width,
+          required TextStyle style}) =>
       ListTile(
         leading: _buildTweetProfilePhoto,
         title: _buildPostTitleContentImage(
@@ -43,10 +43,10 @@ class PostListTile extends StatelessWidget {
       );
 
   Wrap _buildPostTitleContentImage(
-          {@required BuildContext context,
-          @required double height,
-          @required double width,
-          @required TextStyle style}) =>
+          {required BuildContext context,
+          required double height,
+          required double width,
+          required TextStyle style}) =>
       Wrap(
         direction: Axis.vertical,
         children: [
@@ -59,7 +59,7 @@ class PostListTile extends StatelessWidget {
       );
 
   Wrap _buildTweetTitle(
-          {@required BuildContext context, @required TextStyle style}) =>
+          {required BuildContext context, required TextStyle style}) =>
       Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
         alignment: WrapAlignment.center,
@@ -72,13 +72,13 @@ class PostListTile extends StatelessWidget {
         ],
       );
 
-  Text _buildTweetContent({@required BuildContext context}) => Text(
+  Text _buildTweetContent({required BuildContext context}) => Text(
         tweet.tweetContent[index],
         style: Theme.of(context).textTheme.bodyText2,
       );
 
   Container _buildPostmageContainer(
-          {@required double height, @required double width}) =>
+          {required double height, required double width}) =>
       Container(
         height: height / 2,
         width: width / 1.3,
@@ -92,7 +92,7 @@ class PostListTile extends StatelessWidget {
       ),
       borderRadius: borderRadiusCircularTwenty);
 
-  Row _buildActionsRow({@required BuildContext context}) => Row(
+  Row _buildActionsRow({required BuildContext context}) => Row(
         children: [
           _buildTweetIconLabel(
               count: tweet.commentCount[index],
@@ -113,9 +113,9 @@ class PostListTile extends StatelessWidget {
       );
 
   Widget _buildTweetIconLabel(
-      {@required int count,
-      @required IconData icon,
-      @required BuildContext context}) {
+      {required int count,
+      required IconData icon,
+      required BuildContext context}) {
     return Padding(
       padding: applyPadding.paddingAllSixteen,
       child: InkWell(
@@ -139,7 +139,7 @@ class PostListTile extends StatelessWidget {
     );
   }
 
-  Icon _buildIcon({IconData icon, Color color}) => Icon(
+  Icon _buildIcon({required IconData icon, required Color color}) => Icon(
         icon,
         color: color,
       );

@@ -9,7 +9,7 @@ import 'home_page_view_model.dart';
 class HomePageView extends HomePageViewModel {
   final ScrollController controller;
 
-  HomePageView({@required this.controller});
+  HomePageView({required this.controller});
 
   @override
   Widget build(BuildContext context) {

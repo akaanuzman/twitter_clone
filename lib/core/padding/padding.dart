@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
 class ApplyPadding {
-  static ApplyPadding _instace;
+  static ApplyPadding? _instace;
   static ApplyPadding get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = ApplyPadding._init();
-    return _instace;
+    return _instace!;
   }
 
   ApplyPadding._init();

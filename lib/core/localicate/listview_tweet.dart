@@ -1,9 +1,9 @@
 class Tweet {
-  static Tweet _instace;
+  static Tweet? _instace;
   static Tweet get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = Tweet._init();
-    return _instace;
+    return _instace!;
   }
 
   Tweet._init();

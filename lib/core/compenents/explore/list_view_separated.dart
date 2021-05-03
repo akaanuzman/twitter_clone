@@ -16,7 +16,7 @@ class ExplorePageListViewSeparated extends StatelessWidget {
         separatorBuilder: (context, index) => divider,
       );
 
-  Card _buildCard({@required BuildContext context, @required int index}) =>
+  Card _buildCard({required BuildContext context, required int index}) =>
       Card(
           color: Theme.of(context).appBarTheme.backgroundColor,
           elevation: 0,

@@ -1,9 +1,9 @@
 class TabBarStrings {
-  static TabBarStrings _instace;
+  static TabBarStrings? _instace;
   static TabBarStrings get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = TabBarStrings._init();
-    return _instace;
+    return _instace!;
   }
 
   TabBarStrings._init();

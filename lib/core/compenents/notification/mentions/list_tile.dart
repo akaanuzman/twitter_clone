@@ -6,7 +6,7 @@ import 'package:twitter_clone/core/padding/padding.dart';
 class MentionsListTile extends StatelessWidget {
   final int index;
 
-  const MentionsListTile({Key key, @required this.index}) : super(key: key);
+  const MentionsListTile({Key? key, required this.index}) : super(key: key);
 
   PagesString get notificationPageString => PagesString.instance;
 
@@ -14,11 +14,11 @@ class MentionsListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle subtitle1 = Theme.of(context).textTheme.subtitle1;
+    final TextStyle subtitle1 = Theme.of(context).textTheme.subtitle1!;
     final Color secondary = Theme.of(context).colorScheme.secondary;
     final TextStyle bodyText1 = Theme.of(context)
         .textTheme
-        .bodyText1
+        .bodyText1!
         .copyWith(fontWeight: FontWeight.w400, fontSize: 16);
 
     return _buildListTile(
@@ -29,10 +29,10 @@ class MentionsListTile extends StatelessWidget {
   }
 
   ListTile _buildListTile(
-          {@required TextStyle firstStyle,
-          @required TextStyle secondStyle,
-          @required Color color,
-          @required BuildContext context}) =>
+          {required TextStyle firstStyle,
+          required TextStyle secondStyle,
+          required Color color,
+          required BuildContext context}) =>
       ListTile(
         leading: _buildLeading,
         title: _buildLastWrap,
@@ -52,17 +52,17 @@ class MentionsListTile extends StatelessWidget {
         children: [
           _buildTextStyle(
               data: notificationPageString.username, style: boldText),
-          _buildTextStyle(data: notificationPageString.nickName),
-          _buildTextStyle(data: notificationPageString.sign),
-          _buildTextStyle(data: notificationPageString.date),
+          Text(notificationPageString.nickName),
+          Text(notificationPageString.sign),
+          Text(notificationPageString.date),
         ],
       );
 
   Wrap _buildSubtitle(
-          {@required TextStyle firstStyle,
-          @required TextStyle secondStyle,
-          @required Color color,
-          @required BuildContext context}) =>
+          {required TextStyle firstStyle,
+          required TextStyle secondStyle,
+          required Color color,
+          required BuildContext context}) =>
       Wrap(
         children: [
           _buildReplyingToContentWrap(
@@ -72,9 +72,9 @@ class MentionsListTile extends StatelessWidget {
       );
 
   Wrap _buildReplyingToContentWrap(
-          {@required TextStyle firstStyle,
-          @required TextStyle secondStyle,
-          @required Color color}) =>
+          {required TextStyle firstStyle,
+          required TextStyle secondStyle,
+          required Color color}) =>
       Wrap(
         direction: Axis.vertical,
         children: [
@@ -84,8 +84,7 @@ class MentionsListTile extends StatelessWidget {
         ],
       );
 
-  Wrap _buildReplyingToWrap(
-          {@required TextStyle style, @required Color color}) =>
+  Wrap _buildReplyingToWrap({required TextStyle style, required Color color}) =>
       Wrap(
         spacing: 4,
         children: [
@@ -99,7 +98,7 @@ class MentionsListTile extends StatelessWidget {
       );
 
   Row _buildRowIcon(
-          {@required BuildContext context, @required TextStyle style}) =>
+          {required BuildContext context, required TextStyle style}) =>
       Row(
         children: [
           _buildTweetIconLabel(
@@ -121,10 +120,10 @@ class MentionsListTile extends StatelessWidget {
       );
 
   Widget _buildTweetIconLabel(
-          {@required int count,
-          @required IconData icon,
-          @required BuildContext context,
-          @required TextStyle style}) =>
+          {required int count,
+          required IconData icon,
+          required BuildContext context,
+          required TextStyle style}) =>
       Padding(
         padding: applyPadding.paddingLT10R12B,
         child: InkWell(
@@ -135,10 +134,10 @@ class MentionsListTile extends StatelessWidget {
       );
 
   Wrap _buildIconWrap(
-          {@required IconData icon,
-          @required BuildContext context,
-          @required int count,
-          @required TextStyle style}) =>
+          {required IconData icon,
+          required BuildContext context,
+          required int count,
+          required TextStyle style}) =>
       Wrap(
         spacing: 2,
         crossAxisAlignment: WrapCrossAlignment.center,
@@ -153,7 +152,8 @@ class MentionsListTile extends StatelessWidget {
         ],
       );
 
-  Text _buildTextStyle({@required String data, TextStyle style}) => Text(
+  Text _buildTextStyle({required String data, required TextStyle style}) =>
+      Text(
         data,
         style: style,
       );

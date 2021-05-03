@@ -1,9 +1,9 @@
 class DrawerStrings {
-  static DrawerStrings _instace;
+  static DrawerStrings? _instace;
   static DrawerStrings get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = DrawerStrings._init();
-    return _instace;
+    return _instace!;
   }
 
   DrawerStrings._init();

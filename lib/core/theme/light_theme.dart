@@ -3,11 +3,11 @@ import 'package:twitter_clone/core/color/light_theme_colors.dart';
 import 'package:twitter_clone/core/theme/Itheme.dart';
 
 class LightTheme extends Itheme {
-  static LightTheme _instace;
+  static LightTheme? _instace;
   static LightTheme get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = LightTheme._init();
-    return _instace;
+    return _instace!;
   }
 
   LightTheme._init();

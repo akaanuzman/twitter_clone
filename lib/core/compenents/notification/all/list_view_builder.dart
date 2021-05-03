@@ -5,7 +5,7 @@ import 'package:twitter_clone/core/compenents/notification/all/list_tile.dart';
 class AllListViewBuilderView extends StatelessWidget {
   final ScrollController controller;
 
-  const AllListViewBuilderView({Key key, @required this.controller})
+  const AllListViewBuilderView({Key? key, required this.controller})
       : super(key: key);
 
   Divider get dividerBold => Divider(
@@ -24,19 +24,18 @@ class AllListViewBuilderView extends StatelessWidget {
           _buildListViewColumn(context: context, index: index));
 
   Column _buildListViewColumn(
-          {@required BuildContext context, @required int index}) =>
+          {required BuildContext context, required int index}) =>
       Column(
         children: [_buildCard(context: context, index: index), dividerBold],
       );
 
-  Card _buildCard({@required BuildContext context, @required int index}) =>
-      Card(
+  Card _buildCard({required BuildContext context, required int index}) => Card(
         color: Theme.of(context).appBarTheme.backgroundColor,
         elevation: 0,
         child: _buildPaddingListTile(index: index),
       );
 
-  Padding _buildPaddingListTile({@required int index}) => Padding(
+  Padding _buildPaddingListTile({required int index}) => Padding(
       padding: applyPadding.paddingLeftSixteen,
       child: AllListTileView(index: index));
 }

@@ -1,9 +1,9 @@
 class PagesString {
-  static PagesString _instace;
+  static PagesString? _instace;
   static PagesString get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = PagesString._init();
-    return _instace;
+    return _instace!;
   }
 
   PagesString._init();

@@ -41,7 +41,7 @@ class NotificationPageView extends NotificationPageViewModel {
                 data: notificationPageString.tabBarTitle[1], style: tabBarText))
       ]);
 
-  Text _buildText({@required String data, @required TextStyle style}) =>
+  Text _buildText({required String data, required TextStyle style}) =>
       Text(data, style: style);
 
   TabBarView get _buildTabBarView => TabBarView(

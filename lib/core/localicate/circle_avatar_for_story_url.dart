@@ -1,9 +1,9 @@
 class StoryUrl {
-  static StoryUrl _instace;
+  static StoryUrl? _instace;
   static StoryUrl get instance {
-    if (_instace != null) return _instace;
+    if (_instace != null) return _instace!;
     _instace = StoryUrl._init();
-    return _instace;
+    return _instace!;
   }
 
   StoryUrl._init();

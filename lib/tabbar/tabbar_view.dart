@@ -15,11 +15,11 @@ class _TweeterTabbarViewState extends State<TweeterTabbarView>
     with SingleTickerProviderStateMixin {
   Duration get durationFor500ms => Duration(milliseconds: 500);
   TabBarStrings get tabBarStrings => TabBarStrings.instance;
-  ScrollController controller;
+  late ScrollController controller;
   bool openCloseState = false;
   double lastOffset = 0;
   double get appBarHeight => openCloseState ? 0 : 65;
-  TabController tabController;
+  late TabController tabController;
   int currentIndex = 0;
 
 
@@ -137,12 +137,12 @@ class _TweeterTabbarViewState extends State<TweeterTabbarView>
         ],
       );
 
-  BottomAppBar _buildBottomAppBar({@required BuildContext context}) =>
+  BottomAppBar _buildBottomAppBar({required BuildContext context}) =>
       BottomAppBar(
         child: _buildTabBar(context: context),
       );
 
-  TabBar _buildTabBar({@required BuildContext context}) => TabBar(
+  TabBar _buildTabBar({required BuildContext context}) => TabBar(
         unselectedLabelColor: Theme.of(context).colorScheme.onSecondary,
         labelColor: Theme.of(context).colorScheme.secondary,
         onTap: (index) {
@@ -158,7 +158,7 @@ class _TweeterTabbarViewState extends State<TweeterTabbarView>
         ],
       );
 
-  Tab _buildTab({@required BuildContext context, @required IconData icon}) =>
+  Tab _buildTab({required BuildContext context, required IconData icon}) =>
       Tab(
         child: Icon(
           icon,
@@ -166,7 +166,7 @@ class _TweeterTabbarViewState extends State<TweeterTabbarView>
       );
 
   FloatingActionButton _buildFloatingActionButton(
-          {@required BuildContext context}) =>
+          {required BuildContext context}) =>
       FloatingActionButton(
         child: Icon(
           Icons.adb,

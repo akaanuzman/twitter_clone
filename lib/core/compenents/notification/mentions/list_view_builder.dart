@@ -4,7 +4,7 @@ import 'package:twitter_clone/core/compenents/notification/mentions/list_tile.da
 class MentionsListViewBuilder extends StatelessWidget {
   final ScrollController controller;
 
-  const MentionsListViewBuilder({Key key, @required this.controller})
+  const MentionsListViewBuilder({Key? key, required this.controller})
       : super(key: key);
 
   Divider get divider => Divider(
@@ -24,8 +24,7 @@ class MentionsListViewBuilder extends StatelessWidget {
         ),
       );
 
-  Card _buildCard({@required BuildContext context, @required int index}) =>
-      Card(
+  Card _buildCard({required BuildContext context, required int index}) => Card(
         color: Theme.of(context).appBarTheme.backgroundColor,
         elevation: 0,
         child: MentionsListTile(
